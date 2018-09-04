@@ -1,7 +1,7 @@
-package com.sifang.mapper.user;
+package com.wyh.mapper.user;
 
 
-import com.sifang.domain.Userrec;
+import com.wyh.domain.Userrec;
 
 public interface UserrecMapper {
     int deleteByPrimaryKey(Integer id);

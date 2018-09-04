@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="com.sifang.mapper.user.UserrecMapper" >
-  <resultMap id="BaseResultMap" type="com.sifang.domain.Userrec" >
+<mapper namespace="com.wyh.mapper.user.UserrecMapper" >
+  <resultMap id="BaseResultMap" type="com.wyh.domain.Userrec" >
     <id column="id" property="id" jdbcType="INTEGER" />
     <result column="recuid" property="recuid" jdbcType="INTEGER" />
     <result column="berecuid" property="berecuid" jdbcType="INTEGER" />
@@ -20,7 +20,7 @@
     delete from t_userrec
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="com.sifang.domain.Userrec" >
+  <insert id="insert" parameterType="com.wyh.domain.Userrec" >
     <selectKey resultType="java.lang.Integer" keyProperty="id" order="AFTER" >
       SELECT LAST_INSERT_ID()
     </selectKey>
@@ -29,7 +29,7 @@
     values (#{recuid,jdbcType=INTEGER}, #{berecuid,jdbcType=INTEGER}, now()
       )
   </insert>
-  <insert id="insertSelective" parameterType="com.sifang.domain.Userrec" >
+  <insert id="insertSelective" parameterType="com.wyh.domain.Userrec" >
     <selectKey resultType="java.lang.Integer" keyProperty="id" order="AFTER" >
       SELECT LAST_INSERT_ID()
     </selectKey>
@@ -57,7 +57,7 @@
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="com.sifang.domain.Userrec" >
+  <update id="updateByPrimaryKeySelective" parameterType="com.wyh.domain.Userrec" >
     update t_userrec
     <set >
       <if test="recuid != null" >
@@ -72,7 +72,7 @@
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="com.sifang.domain.Userrec" >
+  <update id="updateByPrimaryKey" parameterType="com.wyh.domain.Userrec" >
     update t_userrec
     set recuid = #{recuid,jdbcType=INTEGER},
       berecuid = #{berecuid,jdbcType=INTEGER},

@@ -1,4 +1,4 @@
-package com.sifang.domain;
+package com.wyh.domain;
 
 import java.util.Date;
 

@@ -16,7 +16,11 @@
             <groupId>com.qfedu</groupId>
             <artifactId>wyh_Domain</artifactId>
             <version>1.0.0</version>
-            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.qfedu</groupId>
+            <artifactId>wyh_Common</artifactId>
+            <version>1.0.0</version>
         </dependency>
     </dependencies>
 
