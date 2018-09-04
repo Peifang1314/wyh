@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.sifang.mapper.user.UserrecMapper" >
+  <resultMap id="BaseResultMap" type="com.sifang.domain.Userrec" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="recuid" property="recuid" jdbcType="INTEGER" />
+    <result column="berecuid" property="berecuid" jdbcType="INTEGER" />
+    <result column="createtime" property="createtime" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, recuid, berecuid, createtime
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from t_userrec
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from t_userrec
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="com.sifang.domain.Userrec" >
+    <selectKey resultType="java.lang.Integer" keyProperty="id" order="AFTER" >
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into t_userrec (recuid, berecuid, createtime
+      )
+    values (#{recuid,jdbcType=INTEGER}, #{berecuid,jdbcType=INTEGER}, now()
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.sifang.domain.Userrec" >
+    <selectKey resultType="java.lang.Integer" keyProperty="id" order="AFTER" >
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into t_userrec
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="recuid != null" >
+        recuid,
+      </if>
+      <if test="berecuid != null" >
+        berecuid,
+      </if>
+      <if test="createtime != null" >
+        createtime,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="recuid != null" >
+        #{recuid,jdbcType=INTEGER},
+      </if>
+      <if test="berecuid != null" >
+        #{berecuid,jdbcType=INTEGER},
+      </if>
+      <if test="createtime != null" >
+        #{createtime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.sifang.domain.Userrec" >
+    update t_userrec
+    <set >
+      <if test="recuid != null" >
+        recuid = #{recuid,jdbcType=INTEGER},
+      </if>
+      <if test="berecuid != null" >
+        berecuid = #{berecuid,jdbcType=INTEGER},
+      </if>
+      <if test="createtime != null" >
+        createtime = #{createtime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.sifang.domain.Userrec" >
+    update t_userrec
+    set recuid = #{recuid,jdbcType=INTEGER},
+      berecuid = #{berecuid,jdbcType=INTEGER},
+      createtime = #{createtime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>
