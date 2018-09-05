@@ -11,6 +11,12 @@
 
     <artifactId>wyh_WebController</artifactId>
     <packaging>war</packaging>
-
+    <dependencies>
+        <dependency>
+            <groupId>com.qfedu</groupId>
+            <artifactId>wyh_UserServiceProvider</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+    </dependencies>
 
 </project>

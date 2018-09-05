@@ -12,12 +12,12 @@
         <module>wyh_Domain</module>
         <module>wyh_Mapper</module>
         <module>wyh_Web</module>
-        <module>wyh_WebController</module>
-
         <module>wyh_UserService</module>
         <module>wyh_SSOService</module>
         <module>wyh_SSOServiceProvider</module>
         <module>wyh_LoginController</module>
+        <module>wyh_UserServiceProvider</module>
+        <module>wyh_WebController</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -229,7 +229,5 @@
             </plugin>
         </plugins>
     </build>
-
-
 
 </project>

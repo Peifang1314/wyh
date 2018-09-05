@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/wyh_WebController/wyh_WebController.iml" filepath="$PROJECT_DIR$/wyh_WebController/wyh_WebController.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wyh_WebController/src/main/main.iml" filepath="$PROJECT_DIR$/wyh_WebController/src/main/main.iml" />
     </modules>
   </component>
 </project>
