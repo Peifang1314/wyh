@@ -15,7 +15,7 @@ import org.springframework.stereotype.Service;
  **/
 
 @Service
-public class UserServiceProvide implements UserService {
+public class UserServiceProvider implements UserService {
     @Autowired
     private UserMapper userMapper;
     @Override

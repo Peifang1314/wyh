@@ -279,7 +279,7 @@ transition: transform 1s linear;}
 .media li p a:hover{ color:#919191; text-decoration:none;}
 
 /*合作机构*/
-.cooperate{ float:left; padding-bottom:10px; *+padding-bottom:30px; display:none;}
+.cooperate{ float:left; padding-bottom:10px; padding-bottom:30px; display:none;}
 .cooperate-more{float:left; width:920px; margin-top:10px; border-bottom:2px solid #E2E2E2;height:38px; overflow:hidden;}
 .cooperate ul{ float:left; margin-left:-31px; margin-top:20px; width:1033px; height: auto; }
 .cooperate li{ float:left; border:1px solid #E2E2E2; border-radius:3px; margin-left:33px; margin-bottom:20px; overflow:hidden;transition:border 0.3s ease-in-out;}
